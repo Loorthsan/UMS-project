@@ -61,8 +61,6 @@ namespace UnicomTicProject.Controller
                                     Gmail = @gmail,
                                     Nicno = @nicno,
                                     UTnumber = @utnumber,
-                                    UserName = @username,
-                                    courseid = @courseid,
                                 WHERE UTnumber = @id";
 
                     cmd.Parameters.AddWithValue("@fullname", student.Fullname);
@@ -73,8 +71,8 @@ namespace UnicomTicProject.Controller
                     cmd.Parameters.AddWithValue("@gmail", student.Gmail);
                     cmd.Parameters.AddWithValue("@nicno", student.Nicno);
                     cmd.Parameters.AddWithValue("@utnumber", student.UTnumber);
-                    cmd.Parameters.AddWithValue("@username", student.UserName);
-                    cmd.Parameters.AddWithValue("@courseid", student.Courseid);
+                    
+
                     cmd.ExecuteNonQuery();
                 }       
             }
@@ -97,16 +95,14 @@ namespace UnicomTicProject.Controller
                 while (reader.Read())
                 {
                     Student student = new Student();
-                    student.UTnumber = reader.GetInt32(reader.GetOrdinal("UTnumber"));
-                    student.Fullname = reader.GetString(reader.GetOrdinal("Fullname"));
-                    student.Birthofdate = reader.GetString(reader.GetOrdinal("Birthofdate"));
-                    student.Gender = reader.GetString(reader.GetOrdinal("Gender"));
-                    student.Address = reader.GetString(reader.GetOrdinal("Address"));
-                    student.Phonenumber = reader.GetString(reader.GetOrdinal("Phonenumber"));
-                    student.Gmail = reader.GetString(reader.GetOrdinal("Gmail"));
-                    student.Nicno = reader.GetString(reader.GetOrdinal("Nicno"));
-                    //student.UserName = reader.GetString(reader.GetOrdinal("UserName"));
-                    student.CourseId = reader.GetInt32(reader.GetOrdinal("courseid"));
+                    student.Fullname = reader.GetString(0);
+                    student.Birthofdate = reader.GetString(1);
+                    student.Gender = reader.GetString(2);
+                    student.Address = reader.GetString(3);
+                    student.Phonenumber = reader.GetString(4);
+                    student.Gmail = reader.GetString(5);
+                    student.Nicno = reader.GetString(6);
+                    students.Add(student);
                 }
             }
 

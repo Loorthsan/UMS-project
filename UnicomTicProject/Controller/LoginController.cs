@@ -1,30 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnicomTicProject.Models;
 
 namespace UnicomTicProject.Controller
 {
-    internal class LoginController
+    public class LoginController
     {
-        public bool AuthenticateUse(User user)
+       
+        private readonly Dictionary<string, (string username, string password)> users =
+        new Dictionary<string, (string username, string password)>()
         {
-            
-            if ((user.UserName == "admin" && user.password == "123" && user.Role == "Admin") ||
-                (user.UserName == "staff" && user.password == "456" && user.Role == "Staff")  ||
-                (user.UserName == "Priyan" && user.password== "789" && user .Role =="student") ||
-                (user.UserName == "Raj" && user.password == "789" && user.Role == "student") ||
-                (user.UserName == "lecture" && user.password=="012" && user .Role == "Lecture"))
+            { "Student", ("student", "stud123") },
+            { "Admin", ("admin", "admin123") },
+            { "Staff", ("staff", "staff123") },
+            { "Lecture",("lecture", "lect123") }
+        };
 
-
+        // Main method to validate user login
+        public string ValidateUser(string role, string username, string password)
+        {
+            if (users.ContainsKey(role) &&
+                users[role].username == username &&
+                users[role].password == password)
             {
-                return true;
+                return role;
             }
-
-            return false;
+            return null;
         }
     }
-
 }

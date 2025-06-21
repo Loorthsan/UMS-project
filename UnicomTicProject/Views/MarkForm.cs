@@ -16,5 +16,10 @@ namespace UnicomTicProject.Views
         {
             InitializeComponent();
         }
+
+        private void MarkList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,7 @@ namespace UnicomTicProject.Repositeries
                     Gmail TEXT NOT NULL, 
                     Nicno TEXT NOT NULL,                  
                     UserName TEXT NOT NULL,
+                   
                     courseid INTEGER,
                     FOREIGN KEY (courseid) REFERENCES COURSE(courseid)
                 );

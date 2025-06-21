@@ -18,7 +18,10 @@ namespace UnicomTicProject.Models
         public string Nicno { get; set; }
         public int UTnumber { get; set; }
         public int Courseid { get; set; }
-        public string UserName { get; set; }  
+        public string UserName { get; set; }
+        //public string Password { get; set; }
+       
+        public int CourseId { get; set; }
 
 
 

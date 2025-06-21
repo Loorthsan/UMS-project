@@ -28,10 +28,9 @@ namespace UnicomTicProject.Views
 
         private void LoadStudent()
         {
-            StudentController studentController = new StudentController();
-            List<Student> student = _Studentcontroller.ViewAllStudents();
             viewstudent.DataSource = null;
-            viewstudent.DataSource = student;
+            viewstudent.DataSource = _Studentcontroller.ViewAllStudents();         
+            viewstudent.ClearSelection();
 
         }
 
@@ -40,7 +39,9 @@ namespace UnicomTicProject.Views
         private void addstu_button(object sender, EventArgs e)
         {
             Student student = new Student
+
             {
+                UTnumber = int.Parse(uTnumber2.Text),
                 Fullname = name_textBox3.Text,
                 Birthofdate = birth.Text,
                 Gender = gender3.Text,
@@ -48,7 +49,8 @@ namespace UnicomTicProject.Views
                 Phonenumber = ph_notextBox5.Text,
                 Gmail = gmailtextBox6.Text,
                 Nicno = NICno.Text,
-
+                UserName = Usernametext.Text,
+                CourseId = int.Parse(courseIDtext.Text),
             };
 
 
@@ -61,7 +63,9 @@ namespace UnicomTicProject.Views
             ph_notextBox5.Text = "";
             gmailtextBox6.Text = "";
             NICno.Text = "";
-            
+            uTnumber2.Text = "";
+            Usernametext.Text = "";
+            courseIDtext.Text = "";
             LoadStudent();
 
         }
@@ -72,7 +76,7 @@ namespace UnicomTicProject.Views
         {
             if (viewstudent.SelectedRows.Count > 0)
             {
-                int selectedUtnumber = Convert.ToInt32(viewstudent.SelectedRows[0].Cells["StudentId"].Value);
+                int selectedUtnumber = Convert.ToInt32(viewstudent.SelectedRows[0].Cells["UTnumber"].Value);
 
 
                 Student updatedStudent = new Student
@@ -85,8 +89,9 @@ namespace UnicomTicProject.Views
                     Address = addresstextBox4.Text,
                     Phonenumber = ph_notextBox5.Text,
                     Gmail = gmailtextBox6.Text,
-                    Nicno = NICno.Text
-
+                    Nicno = NICno.Text,
+                     UserName = Usernametext.Text,
+                    CourseId = int.Parse(courseIDtext.Text)
 
                 };
 
@@ -121,7 +126,8 @@ namespace UnicomTicProject.Views
                     ph_notextBox5.Text = "";
                     gmailtextBox6.Text = "";
                     NICno.Text = "";
-
+                    Usernametext.Text = "";
+                    courseIDtext.Text = "";
 
                 }
 
@@ -157,7 +163,7 @@ namespace UnicomTicProject.Views
                 birth.Text = selectedRow.Cells["Birthofdate"].Value.ToString();
                 gender3.Text = selectedRow.Cells["Gender"].Value.ToString();
                 ph_notextBox5.Text = selectedRow.Cells["Phonenumber"].Value.ToString();
-                gmailtextBox6.Text = selectedRow.Cells["mail"].Value.ToString();
+                gmailtextBox6.Text = selectedRow.Cells["Gmail"].Value.ToString();
                 NICno.Text = selectedRow.Cells["Nicno"].Value.ToString() ;
 
             }

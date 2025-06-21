@@ -28,36 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.MSlist_button = new System.Windows.Forms.Button();
+            this.manageLecture_button = new System.Windows.Forms.Button();
+            this.manageStaff_button = new System.Windows.Forms.Button();
+            this.exsamList_button = new System.Windows.Forms.Button();
+            this.timtTable_button = new System.Windows.Forms.Button();
+            this.subject_button = new System.Windows.Forms.Button();
+            this.attendance_button = new System.Windows.Forms.Button();
+            this.vlForm_button = new System.Windows.Forms.Button();
+            this.close_button = new System.Windows.Forms.Button();
+            this.markList_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(912, 116);
-            this.panel1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlText;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(289, 56);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(291, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(227, 39);
             this.label2.TabIndex = 1;
@@ -66,155 +58,173 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightGreen;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(291, 139);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(325, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select Option";
             // 
-            // button1
+            // MSlist_button
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(55, 195);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 65);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Manage Student list";
-            this.button1.UseVisualStyleBackColor = true;
+            this.MSlist_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.MSlist_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MSlist_button.Location = new System.Drawing.Point(114, 205);
+            this.MSlist_button.Name = "MSlist_button";
+            this.MSlist_button.Size = new System.Drawing.Size(141, 65);
+            this.MSlist_button.TabIndex = 1;
+            this.MSlist_button.Text = "Manage Student list";
+            this.MSlist_button.UseVisualStyleBackColor = false;
+            this.MSlist_button.Click += new System.EventHandler(this.MSlist_button_Click);
             // 
-            // button3
+            // manageLecture_button
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(55, 281);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 65);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Manage Lecture";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.manageLecture_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.manageLecture_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageLecture_button.Location = new System.Drawing.Point(114, 301);
+            this.manageLecture_button.Name = "manageLecture_button";
+            this.manageLecture_button.Size = new System.Drawing.Size(141, 65);
+            this.manageLecture_button.TabIndex = 3;
+            this.manageLecture_button.Text = "Manage Lecture";
+            this.manageLecture_button.UseVisualStyleBackColor = false;
+            this.manageLecture_button.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // manageStaff_button
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(64, 397);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 65);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Manage staff List ";
-            this.button4.UseVisualStyleBackColor = true;
+            this.manageStaff_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.manageStaff_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageStaff_button.Location = new System.Drawing.Point(114, 408);
+            this.manageStaff_button.Name = "manageStaff_button";
+            this.manageStaff_button.Size = new System.Drawing.Size(141, 65);
+            this.manageStaff_button.TabIndex = 4;
+            this.manageStaff_button.Text = "Manage staff List ";
+            this.manageStaff_button.UseVisualStyleBackColor = false;
+            this.manageStaff_button.Click += new System.EventHandler(this.manageStaff_button_Click);
             // 
-            // button5
+            // exsamList_button
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(296, 397);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 65);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Exsam list ";
-            this.button5.UseVisualStyleBackColor = true;
+            this.exsamList_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.exsamList_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exsamList_button.Location = new System.Drawing.Point(345, 397);
+            this.exsamList_button.Name = "exsamList_button";
+            this.exsamList_button.Size = new System.Drawing.Size(141, 65);
+            this.exsamList_button.TabIndex = 5;
+            this.exsamList_button.Text = "Exsam list ";
+            this.exsamList_button.UseVisualStyleBackColor = false;
+            this.exsamList_button.Click += new System.EventHandler(this.exsamList_button_Click);
             // 
-            // button6
+            // timtTable_button
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(533, 291);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(141, 65);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Time Table ";
-            this.button6.UseVisualStyleBackColor = true;
+            this.timtTable_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.timtTable_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timtTable_button.Location = new System.Drawing.Point(590, 301);
+            this.timtTable_button.Name = "timtTable_button";
+            this.timtTable_button.Size = new System.Drawing.Size(141, 65);
+            this.timtTable_button.TabIndex = 6;
+            this.timtTable_button.Text = "Time Table ";
+            this.timtTable_button.UseVisualStyleBackColor = false;
+            this.timtTable_button.Click += new System.EventHandler(this.timtTable_button_Click);
             // 
-            // button7
+            // subject_button
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(296, 195);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 65);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Subject ";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.subject_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.subject_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subject_button.Location = new System.Drawing.Point(345, 205);
+            this.subject_button.Name = "subject_button";
+            this.subject_button.Size = new System.Drawing.Size(141, 65);
+            this.subject_button.TabIndex = 7;
+            this.subject_button.Text = "Subject ";
+            this.subject_button.UseVisualStyleBackColor = false;
+            this.subject_button.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // attendance_button
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(296, 291);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(141, 65);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Attendance";
-            this.button8.UseVisualStyleBackColor = true;
+            this.attendance_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.attendance_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attendance_button.Location = new System.Drawing.Point(345, 301);
+            this.attendance_button.Name = "attendance_button";
+            this.attendance_button.Size = new System.Drawing.Size(141, 65);
+            this.attendance_button.TabIndex = 8;
+            this.attendance_button.Text = "Attendance";
+            this.attendance_button.UseVisualStyleBackColor = false;
+            this.attendance_button.Click += new System.EventHandler(this.attendance_button_Click);
             // 
-            // button9
+            // vlForm_button
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(533, 195);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(141, 65);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "View Leave Form ";
-            this.button9.UseVisualStyleBackColor = true;
+            this.vlForm_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.vlForm_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vlForm_button.Location = new System.Drawing.Point(590, 205);
+            this.vlForm_button.Name = "vlForm_button";
+            this.vlForm_button.Size = new System.Drawing.Size(141, 65);
+            this.vlForm_button.TabIndex = 9;
+            this.vlForm_button.Text = "View Leave Form ";
+            this.vlForm_button.UseVisualStyleBackColor = false;
+            this.vlForm_button.Click += new System.EventHandler(this.vlForm_button_Click);
             // 
-            // button2
+            // close_button
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(730, 560);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 42);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = true;
+            this.close_button.BackColor = System.Drawing.Color.Blue;
+            this.close_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_button.ForeColor = System.Drawing.Color.White;
+            this.close_button.Location = new System.Drawing.Point(691, 573);
+            this.close_button.Name = "close_button";
+            this.close_button.Size = new System.Drawing.Size(141, 42);
+            this.close_button.TabIndex = 24;
+            this.close_button.Text = "Close";
+            this.close_button.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // markList_button
             // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(533, 397);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(141, 64);
-            this.button10.TabIndex = 25;
-            this.button10.Text = "Mark List";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.markList_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.markList_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.markList_button.Location = new System.Drawing.Point(590, 397);
+            this.markList_button.Name = "markList_button";
+            this.markList_button.Size = new System.Drawing.Size(141, 64);
+            this.markList_button.TabIndex = 25;
+            this.markList_button.Text = "Mark List";
+            this.markList_button.UseVisualStyleBackColor = false;
+            this.markList_button.Click += new System.EventHandler(this.button10_Click);
             // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 628);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button9);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(899, 661);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.markList_button);
+            this.Controls.Add(this.close_button);
+            this.Controls.Add(this.vlForm_button);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.attendance_button);
+            this.Controls.Add(this.subject_button);
+            this.Controls.Add(this.timtTable_button);
+            this.Controls.Add(this.exsamList_button);
+            this.Controls.Add(this.manageStaff_button);
+            this.Controls.Add(this.manageLecture_button);
+            this.Controls.Add(this.MSlist_button);
             this.Name = "AdminMainForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.AdminMainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button MSlist_button;
+        private System.Windows.Forms.Button manageLecture_button;
+        private System.Windows.Forms.Button manageStaff_button;
+        private System.Windows.Forms.Button exsamList_button;
+        private System.Windows.Forms.Button timtTable_button;
+        private System.Windows.Forms.Button subject_button;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button attendance_button;
+        private System.Windows.Forms.Button vlForm_button;
+        private System.Windows.Forms.Button close_button;
+        private System.Windows.Forms.Button markList_button;
     }
 }

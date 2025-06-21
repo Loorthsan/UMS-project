@@ -51,6 +51,10 @@
             this.updatestu_button = new System.Windows.Forms.Button();
             this.removestu_button = new System.Windows.Forms.Button();
             this.searchStuButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Usernametext = new System.Windows.Forms.TextBox();
+            this.courseIDtext = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewstudent)).BeginInit();
             this.SuspendLayout();
@@ -263,12 +267,50 @@
             this.searchStuButton.Text = "Search";
             this.searchStuButton.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 381);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 16);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "UserName";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(12, 415);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 16);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Course Id";
+            // 
+            // Usernametext
+            // 
+            this.Usernametext.Location = new System.Drawing.Point(157, 377);
+            this.Usernametext.Name = "Usernametext";
+            this.Usernametext.Size = new System.Drawing.Size(196, 20);
+            this.Usernametext.TabIndex = 26;
+            // 
+            // courseIDtext
+            // 
+            this.courseIDtext.Location = new System.Drawing.Point(157, 415);
+            this.courseIDtext.Name = "courseIDtext";
+            this.courseIDtext.Size = new System.Drawing.Size(196, 20);
+            this.courseIDtext.TabIndex = 27;
+            // 
             // All_Student_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1048, 658);
+            this.Controls.Add(this.courseIDtext);
+            this.Controls.Add(this.Usernametext);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.searchStuButton);
             this.Controls.Add(this.removestu_button);
             this.Controls.Add(this.updatestu_button);
@@ -292,7 +334,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "All_Student_List";
-            this.Text = "Manage Student List \'";
+            this.Text = "Manage Student List ";
             this.Load += new System.EventHandler(this.All_Student_List_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -327,5 +369,9 @@
         private System.Windows.Forms.Button updatestu_button;
         private System.Windows.Forms.Button removestu_button;
         private System.Windows.Forms.Button searchStuButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox Usernametext;
+        private System.Windows.Forms.TextBox courseIDtext;
     }
 }

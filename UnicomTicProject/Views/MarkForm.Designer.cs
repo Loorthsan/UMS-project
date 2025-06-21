@@ -245,6 +245,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "MarkList";
             this.Text = "MarkForm";
+            this.Load += new System.EventHandler(this.MarkList_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

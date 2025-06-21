@@ -20,11 +20,11 @@ namespace UnicomTicProject
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            Application.Run(new LoginForm());
             //Application.Run(new CourseForm());
             
-           // Application.Run(new ExamForm());
-            Application.Run(new All_Student_List());
+            //Application.Run(new ExamForm());
+            //Application.Run(new All_Student_List());
         }
     }
 }

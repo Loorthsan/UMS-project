@@ -8,7 +8,6 @@ Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Properties.Re
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.AdminMainForm.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.CourseForm.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.MarkList.resources
-Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.SingupForm.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.Apply_Leave_Form.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.Attendance.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.ExamForm.resources

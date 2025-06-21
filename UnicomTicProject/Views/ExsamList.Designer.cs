@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.exsam = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,22 +53,22 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.exsam);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(855, 91);
             this.panel1.TabIndex = 0;
             // 
-            // label6
+            // exsam
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(252, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 24);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "ExamForm";
+            this.exsam.AutoSize = true;
+            this.exsam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exsam.Location = new System.Drawing.Point(252, 41);
+            this.exsam.Name = "exsam";
+            this.exsam.Size = new System.Drawing.Size(112, 24);
+            this.exsam.TabIndex = 0;
+            this.exsam.Text = "ExamForm";
             // 
             // label1
             // 
@@ -274,7 +274,7 @@
         private System.Windows.Forms.TextBox coursenametextbox;
         private System.Windows.Forms.TextBox markstextbox;
         private System.Windows.Forms.DataGridView Examview;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label exsam;
         private System.Windows.Forms.Button savebutton;
         private System.Windows.Forms.Button updatebutton;
         private System.Windows.Forms.Button closebutton;
