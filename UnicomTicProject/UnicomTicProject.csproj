@@ -57,15 +57,10 @@
     <Compile Include="Controller\LoginControllerBase.cs" />
     <Compile Include="Controller\MarkController.cs" />
     <Compile Include="Controller\StudentController.cs" />
+    <Compile Include="Controller\SubjectController.cs" />
     <Compile Include="Controller\TimetableController.cs" />
-    <Compile Include="Models\CoureseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Models\CoureseForm.Designer.cs">
-      <DependentUpon>CoureseForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\Exam.cs" />
+    <Compile Include="Models\Exsam.cs" />
     <Compile Include="Models\Mark.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\Student.cs" />
@@ -81,6 +76,18 @@
     </Compile>
     <Compile Include="Views\AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CourseForm.Designer.cs">
+      <DependentUpon>CourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SingupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SingupForm.Designer.cs">
+      <DependentUpon>SingupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Student Apply Leave Form.cs">
       <SubType>Form</SubType>
@@ -160,6 +167,7 @@
     <Compile Include="Views\TimeTableForm.Designer.cs">
       <DependentUpon>TimeTableForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserModel.cs" />
     <Compile Include="Views\View Leave Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,8 +186,14 @@
     <EmbeddedResource Include="Views\AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CourseForm.resx">
+      <DependentUpon>CourseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MarkForm.resx">
       <DependentUpon>MarkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SingupForm.resx">
+      <DependentUpon>SingupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Student Apply Leave Form.resx">
       <DependentUpon>Student Apply Leave Form.cs</DependentUpon>

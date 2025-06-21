@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnicomTicProject.Models
+namespace UnicomTicProject.Controller
 {
-    internal class Exam
+    internal class AttendanceController
     {
     }
 }

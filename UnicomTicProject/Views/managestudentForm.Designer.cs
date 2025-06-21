@@ -44,17 +44,15 @@
             this.gmailtextBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.UTno = new System.Windows.Forms.TextBox();
+            this.uTnumber2 = new System.Windows.Forms.TextBox();
             this.NICno = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.viewstudent = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.updatestu_button = new System.Windows.Forms.Button();
+            this.removestu_button = new System.Windows.Forms.Button();
+            this.searchStuButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewstudent)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -198,27 +196,29 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "Gender";
             // 
-            // UTno
+            // uTnumber2
             // 
-            this.UTno.Location = new System.Drawing.Point(157, 304);
-            this.UTno.Name = "UTno";
-            this.UTno.Size = new System.Drawing.Size(196, 20);
-            this.UTno.TabIndex = 17;
+            this.uTnumber2.Location = new System.Drawing.Point(157, 338);
+            this.uTnumber2.Name = "uTnumber2";
+            this.uTnumber2.Size = new System.Drawing.Size(196, 20);
+            this.uTnumber2.TabIndex = 17;
             // 
             // NICno
             // 
-            this.NICno.Location = new System.Drawing.Point(157, 334);
+            this.NICno.Location = new System.Drawing.Point(157, 304);
             this.NICno.Name = "NICno";
             this.NICno.Size = new System.Drawing.Size(196, 20);
             this.NICno.TabIndex = 18;
             // 
-            // dataGridView1
+            // viewstudent
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(387, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(649, 425);
-            this.dataGridView1.TabIndex = 19;
+            this.viewstudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewstudent.Location = new System.Drawing.Point(387, 75);
+            this.viewstudent.Name = "viewstudent";
+            this.viewstudent.Size = new System.Drawing.Size(649, 425);
+            this.viewstudent.TabIndex = 19;
+            this.viewstudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewstudent_CellContentClick);
+            this.viewstudent.SelectionChanged += new System.EventHandler(this.viewstudent_SelectionChanged);
             // 
             // button1
             // 
@@ -229,68 +229,53 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.addstu_button);
             // 
-            // button2
+            // updatestu_button
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(304, 557);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 33);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "UpDate ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.updatestu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatestu_button.Location = new System.Drawing.Point(304, 557);
+            this.updatestu_button.Name = "updatestu_button";
+            this.updatestu_button.Size = new System.Drawing.Size(132, 33);
+            this.updatestu_button.TabIndex = 21;
+            this.updatestu_button.Text = "UpDate ";
+            this.updatestu_button.UseVisualStyleBackColor = true;
+            this.updatestu_button.Click += new System.EventHandler(this.updatestu_button_Click);
             // 
-            // button3
+            // removestu_button
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(573, 557);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 33);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Remove";
-            this.button3.UseVisualStyleBackColor = true;
+            this.removestu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removestu_button.Location = new System.Drawing.Point(573, 557);
+            this.removestu_button.Name = "removestu_button";
+            this.removestu_button.Size = new System.Drawing.Size(132, 33);
+            this.removestu_button.TabIndex = 22;
+            this.removestu_button.Text = "Remove";
+            this.removestu_button.UseVisualStyleBackColor = true;
+            this.removestu_button.Click += new System.EventHandler(this.removestu_button_Click);
             // 
-            // button4
+            // searchStuButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(810, 557);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 33);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 373);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 16);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Courese ID";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(157, 373);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 20);
-            this.textBox1.TabIndex = 25;
+            this.searchStuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchStuButton.Location = new System.Drawing.Point(810, 557);
+            this.searchStuButton.Name = "searchStuButton";
+            this.searchStuButton.Size = new System.Drawing.Size(132, 33);
+            this.searchStuButton.TabIndex = 23;
+            this.searchStuButton.Text = "Search";
+            this.searchStuButton.UseVisualStyleBackColor = true;
             // 
             // All_Student_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1048, 658);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.searchStuButton);
+            this.Controls.Add(this.removestu_button);
+            this.Controls.Add(this.updatestu_button);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.viewstudent);
             this.Controls.Add(this.NICno);
-            this.Controls.Add(this.UTno);
+            this.Controls.Add(this.uTnumber2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gmailtextBox6);
@@ -308,9 +293,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "All_Student_List";
             this.Text = "Manage Student List \'";
+            this.Load += new System.EventHandler(this.All_Student_List_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewstudent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,14 +320,12 @@
         private System.Windows.Forms.TextBox gmailtextBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox UTno;
+        private System.Windows.Forms.TextBox uTnumber2;
         private System.Windows.Forms.TextBox NICno;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView viewstudent;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button updatestu_button;
+        private System.Windows.Forms.Button removestu_button;
+        private System.Windows.Forms.Button searchStuButton;
     }
 }

@@ -11,7 +11,7 @@ namespace UnicomTicProject.Controller
     {
         public bool AuthenticateUse(User user)
         {
-            // Dummy check: replace with database or API check
+            
             if ((user.UserName == "admin" && user.password == "123" && user.Role == "Admin") ||
                 (user.UserName == "staff" && user.password == "456" && user.Role == "Staff")  ||
                 (user.UserName == "Priyan" && user.password== "789" && user .Role =="student") ||

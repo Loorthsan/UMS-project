@@ -16,5 +16,10 @@ namespace UnicomTicProject.Views
         {
             InitializeComponent();
         }
+
+        private void SubjectForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

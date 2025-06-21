@@ -1,12 +1,131 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using UnicomTicProject.Models;
+using UnicomTicProject.Repositeries;
+using UnicomTicProject.Views;
 
 namespace UnicomTicProject.Controller
 {
     internal class StudentController
     {
+        public void AddStudent(Student student)
+        {
+            try
+            {
+                using (var conn = DBConfig.GetConnection())
+                {
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = @"INSERT INTO STUDENTS 
+                (Fullname, Birthofdate, Gender, Address, Phonenumber, Gmail, Nicno)
+                VALUES (@fullname, @birthdate, @gender, @address, @phone, @gmail, @nicno)";
+
+                    cmd.Parameters.AddWithValue("@fullname", student.Fullname);
+                    cmd.Parameters.AddWithValue("@birthdate", student.Birthofdate);
+                    cmd.Parameters.AddWithValue("@gender", student.Gender);
+                    cmd.Parameters.AddWithValue("@address", student.Address);
+                    cmd.Parameters.AddWithValue("@phone", student.Phonenumber);
+                    cmd.Parameters.AddWithValue("@gmail", student.Gmail);
+                    cmd.Parameters.AddWithValue("@nicno", student.Nicno);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Error inserting student: " + ex.Message);
+            }
+        }
+
+
+        public void UpdateStudent(Student student)
+        {
+            try
+            {
+                using (var conn = DBConfig.GetConnection())
+                {
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = @"UPDATE STUDENTS 
+                                SET Fullname = @fullname,
+                                    Birthofdate = @birthdate,
+                                    Gender = @gender,
+                                    Address = @address,
+                                    Phonenumber = @phone,
+                                    Gmail = @gmail,
+                                    Nicno = @nicno,
+                                    UTnumber = @utnumber,
+                                WHERE StudentId = @id";
+
+                    cmd.Parameters.AddWithValue("@fullname", student.Fullname);
+                    cmd.Parameters.AddWithValue("@birthdate", student.Birthofdate);
+                    cmd.Parameters.AddWithValue("@gender", student.Gender);
+                    cmd.Parameters.AddWithValue("@address", student.Address);
+                    cmd.Parameters.AddWithValue("@phone", student.Phonenumber);
+                    cmd.Parameters.AddWithValue("@gmail", student.Gmail);
+                    cmd.Parameters.AddWithValue("@nicno", student.Nicno);
+                    cmd.Parameters.AddWithValue("@utnumber", student.UTnumber);
+                    cmd.Parameters.AddWithValue("@id", student.UTnumber); 
+
+                    cmd.ExecuteNonQuery();
+                }       
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error updating student: " + ex.Message);
+            }
+        }
+
+
+
+        public List<Student> ViewAllStudents()
+        {
+            var students = new List<Student>();
+
+            using (var conn = DBConfig.GetConnection())
+            {
+                var cmd = new SQLiteCommand("SELECT * FROM STUDENTS", conn);
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Student student = new Student();
+                    student.Fullname = reader.GetString(0);
+                    student.Birthofdate = reader.GetString(1);
+                    student.Gender = reader.GetString(2);
+                    student.Address = reader.GetString(3);
+                    student.Phonenumber = reader.GetString(4);
+                    student.Gmail = reader.GetString(5);
+                    student.Nicno = reader.GetString(6);
+                    students.Add(student);
+                }
+            }
+
+            return students;
+        }
+
+        internal void DeleteStudent(int selectedId)
+        {
+            try
+            {
+                using (var conn = DBConfig.GetConnection())
+                {
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = "DELETE FROM STUDENTS WHERE selectedId = @id";
+                    cmd.Parameters.AddWithValue("@id", selectedId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error deleting selected: " + ex.Message);
+            }
+        }
     }
-}
+
+}   
+    
+

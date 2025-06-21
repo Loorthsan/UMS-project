@@ -1,6 +1,6 @@
 ﻿namespace UnicomTicProject.Views
 {
-    partial class MarkForm
+    partial class MarkList
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.M_studenttextbox = new System.Windows.Forms.TextBox();
+            this.m_subjectnametextbox = new System.Windows.Forms.TextBox();
+            this.utnumber = new System.Windows.Forms.TextBox();
+            this.m_subjectidtextbox = new System.Windows.Forms.TextBox();
+            this.m_exsamname = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -60,15 +60,25 @@
             this.panel1.Size = new System.Drawing.Size(860, 99);
             this.panel1.TabIndex = 0;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(285, 47);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 31);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Mark List ";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(76, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 18);
+            this.label1.Size = new System.Drawing.Size(111, 18);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Name :-";
+            this.label1.Text = "StudentName :-";
             // 
             // label2
             // 
@@ -76,9 +86,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(76, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 18);
+            this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "UT No :-";
+            this.label2.Text = "UT Number :-";
             // 
             // label3
             // 
@@ -120,40 +130,40 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Exsam name:-";
             // 
-            // textBox1
+            // M_studenttextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 20);
-            this.textBox1.TabIndex = 7;
+            this.M_studenttextbox.Location = new System.Drawing.Point(182, 120);
+            this.M_studenttextbox.Name = "M_studenttextbox";
+            this.M_studenttextbox.Size = new System.Drawing.Size(148, 20);
+            this.M_studenttextbox.TabIndex = 7;
             // 
-            // textBox2
+            // m_subjectnametextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 20);
-            this.textBox2.TabIndex = 8;
+            this.m_subjectnametextbox.Location = new System.Drawing.Point(182, 192);
+            this.m_subjectnametextbox.Name = "m_subjectnametextbox";
+            this.m_subjectnametextbox.Size = new System.Drawing.Size(148, 20);
+            this.m_subjectnametextbox.TabIndex = 8;
             // 
-            // textBox3
+            // utnumber
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 157);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 20);
-            this.textBox3.TabIndex = 9;
+            this.utnumber.Location = new System.Drawing.Point(182, 157);
+            this.utnumber.Name = "utnumber";
+            this.utnumber.Size = new System.Drawing.Size(148, 20);
+            this.utnumber.TabIndex = 9;
             // 
-            // textBox4
+            // m_subjectidtextbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(577, 124);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 20);
-            this.textBox4.TabIndex = 10;
+            this.m_subjectidtextbox.Location = new System.Drawing.Point(577, 124);
+            this.m_subjectidtextbox.Name = "m_subjectidtextbox";
+            this.m_subjectidtextbox.Size = new System.Drawing.Size(148, 20);
+            this.m_subjectidtextbox.TabIndex = 10;
             // 
-            // textBox5
+            // m_exsamname
             // 
-            this.textBox5.Location = new System.Drawing.Point(577, 159);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(148, 20);
-            this.textBox5.TabIndex = 11;
+            this.m_exsamname.Location = new System.Drawing.Point(577, 159);
+            this.m_exsamname.Name = "m_exsamname";
+            this.m_exsamname.Size = new System.Drawing.Size(148, 20);
+            this.m_exsamname.TabIndex = 11;
             // 
             // textBox6
             // 
@@ -161,16 +171,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(148, 20);
             this.textBox6.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(285, 47);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 31);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Mark List ";
             // 
             // dataGridView1
             // 
@@ -220,7 +220,7 @@
             this.button4.Text = "Close ";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // MarkForm
+            // MarkList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,11 +231,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.m_exsamname);
+            this.Controls.Add(this.m_subjectidtextbox);
+            this.Controls.Add(this.utnumber);
+            this.Controls.Add(this.m_subjectnametextbox);
+            this.Controls.Add(this.M_studenttextbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -243,7 +243,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "MarkForm";
+            this.Name = "MarkList";
             this.Text = "MarkForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -263,11 +263,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox M_studenttextbox;
+        private System.Windows.Forms.TextBox m_subjectnametextbox;
+        private System.Windows.Forms.TextBox utnumber;
+        private System.Windows.Forms.TextBox m_subjectidtextbox;
+        private System.Windows.Forms.TextBox m_exsamname;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UnicomTicProject.Views
 {
-    public partial class MarkForm : Form
+    public partial class MarkList : Form
     {
-        public MarkForm()
+        public MarkList()
         {
             InitializeComponent();
         }

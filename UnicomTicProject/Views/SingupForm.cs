@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UnicomTicProject.Models
+namespace UnicomTicProject.Views
 {
-    public partial class CoureseForm : Form
+    public partial class SingupForm : Form
     {
-        public CoureseForm()
+        public SingupForm()
         {
             InitializeComponent();
+        }
+
+        private void SignUpBitton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
