@@ -80,10 +80,6 @@ namespace UnicomTicProject.Views
             
         }
         
-
-
-
-
         private void coursedataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             

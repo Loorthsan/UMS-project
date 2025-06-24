@@ -32,7 +32,6 @@ namespace UnicomTicProject.Controller
 
             }
         }
-
         public List<Course> ViewAllCourses()
         {
             var courses = new List<Course>();

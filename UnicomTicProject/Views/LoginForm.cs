@@ -34,8 +34,6 @@ namespace UnicomTicProject.Views
            
         }
 
-
-
         private void Log_but1_Click(object sender, EventArgs e)
         {
 
