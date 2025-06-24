@@ -8,9 +8,8 @@ namespace UnicomTicProject.Models
 {
     internal class Exsam
     {
+        public int Studentid { get; set; }
         public int ExamId { get; set; }
-       
-        public int studentid { get; set; }
         public string StudentName { get; set; }
         public string subjectname {  get; set; }
         public string couresename { get; set; }

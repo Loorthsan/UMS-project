@@ -17,17 +17,16 @@ namespace UnicomTicProject.Controller
                     var cmd = conn.CreateCommand();
                     cmd.CommandText = @"
                         INSERT INTO EXAM 
-                        (studentid, StudentName, subjectname, couresename, marks, examname) 
+                        (ExamId, StudentName, subjectname, couresename, marks, examname) 
                         VALUES 
-                        (@studentid, @StudentName, @subjectname, @couresename, @marks, @examname)";
+                        (@exsamid, @StudentName, @subjectname, @couresename, @marks, @examname)";
 
-                    cmd.Parameters.AddWithValue("@studentid", exsam.studentid);
+                    cmd.Parameters.AddWithValue("@exsamid", exsam.ExamId);
                     cmd.Parameters.AddWithValue("@StudentName", exsam.StudentName);
                     cmd.Parameters.AddWithValue("@subjectname", exsam.subjectname);
                     cmd.Parameters.AddWithValue("@couresename", exsam.couresename);
                     cmd.Parameters.AddWithValue("@marks", exsam.marks);
                     cmd.Parameters.AddWithValue("@examname", exsam.examname);
-
                     cmd.ExecuteNonQuery();
                 }
             
@@ -48,8 +47,8 @@ namespace UnicomTicProject.Controller
                 {
                     Exsam exam = new Exsam
                     {
-                        ExamId = reader.GetInt32(0),
-                        studentid = reader.GetInt32(1),
+                        Studentid = reader.GetInt32(0),
+                        ExamId = reader.GetInt32(1),
                         StudentName = reader.GetString(2),
                         subjectname = reader.GetString(3),
                         couresename = reader.GetString(4),
@@ -85,7 +84,7 @@ namespace UnicomTicProject.Controller
                     cmd.Parameters.AddWithValue("@course", exsam.couresename);
                     cmd.Parameters.AddWithValue("@marks", exsam.marks);
                     cmd.Parameters.AddWithValue("@exam", exsam.examname);
-                    cmd.Parameters.AddWithValue("@id", exsam.studentid);
+                    cmd.Parameters.AddWithValue("@id", exsam.Studentid);
 
                     cmd.ExecuteNonQuery();
                 }

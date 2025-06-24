@@ -30,13 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.exsam = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.studentnameTextBox1 = new System.Windows.Forms.TextBox();
-            this.e_studentidTextbox = new System.Windows.Forms.TextBox();
             this.subjectnametextbox = new System.Windows.Forms.TextBox();
             this.coursenametextbox = new System.Windows.Forms.TextBox();
             this.markstextbox = new System.Windows.Forms.TextBox();
@@ -47,6 +45,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.exsamtextBox1 = new System.Windows.Forms.TextBox();
             this.deletebuton = new System.Windows.Forms.Button();
+            this.exsamidTextbox = new System.Windows.Forms.TextBox();
+            this.exsamtextBOX = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Examview)).BeginInit();
             this.SuspendLayout();
@@ -69,16 +69,6 @@
             this.exsam.Size = new System.Drawing.Size(112, 24);
             this.exsam.TabIndex = 0;
             this.exsam.Text = "ExamForm";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 162);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Student ID";
             // 
             // label2
             // 
@@ -127,14 +117,6 @@
             this.studentnameTextBox1.Name = "studentnameTextBox1";
             this.studentnameTextBox1.Size = new System.Drawing.Size(130, 20);
             this.studentnameTextBox1.TabIndex = 6;
-            // 
-            // e_studentidTextbox
-            // 
-            this.e_studentidTextbox.Location = new System.Drawing.Point(153, 162);
-            this.e_studentidTextbox.Name = "e_studentidTextbox";
-            this.e_studentidTextbox.Size = new System.Drawing.Size(130, 20);
-            this.e_studentidTextbox.TabIndex = 7;
-            this.e_studentidTextbox.TextChanged += new System.EventHandler(this.ExamForm_Load);
             // 
             // subjectnametextbox
             // 
@@ -227,6 +209,24 @@
             this.deletebuton.UseVisualStyleBackColor = true;
             this.deletebuton.Click += new System.EventHandler(this.deletebuton_Click);
             // 
+            // exsamidTextbox
+            // 
+            this.exsamidTextbox.Location = new System.Drawing.Point(153, 162);
+            this.exsamidTextbox.Name = "exsamidTextbox";
+            this.exsamidTextbox.Size = new System.Drawing.Size(130, 20);
+            this.exsamidTextbox.TabIndex = 7;
+            this.exsamidTextbox.TextChanged += new System.EventHandler(this.ExamForm_Load);
+            // 
+            // exsamtextBOX
+            // 
+            this.exsamtextBOX.AutoSize = true;
+            this.exsamtextBOX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exsamtextBOX.Location = new System.Drawing.Point(12, 162);
+            this.exsamtextBOX.Name = "exsamtextBOX";
+            this.exsamtextBOX.Size = new System.Drawing.Size(70, 16);
+            this.exsamtextBOX.TabIndex = 1;
+            this.exsamtextBOX.Text = "Exsam Id";
+            // 
             // ExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,13 +242,13 @@
             this.Controls.Add(this.markstextbox);
             this.Controls.Add(this.coursenametextbox);
             this.Controls.Add(this.subjectnametextbox);
-            this.Controls.Add(this.e_studentidTextbox);
+            this.Controls.Add(this.exsamidTextbox);
             this.Controls.Add(this.studentnameTextBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.exsamtextBOX);
             this.Controls.Add(this.panel1);
             this.Name = "ExamForm";
             this.Text = "ExsamList";
@@ -263,13 +263,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox studentnameTextBox1;
-        private System.Windows.Forms.TextBox e_studentidTextbox;
         private System.Windows.Forms.TextBox subjectnametextbox;
         private System.Windows.Forms.TextBox coursenametextbox;
         private System.Windows.Forms.TextBox markstextbox;
@@ -281,5 +279,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox exsamtextBox1;
         private System.Windows.Forms.Button deletebuton;
+        private System.Windows.Forms.TextBox exsamidTextbox;
+        private System.Windows.Forms.Label exsamtextBOX;
     }
 }

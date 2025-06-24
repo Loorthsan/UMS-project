@@ -34,7 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.name_textBox3 = new System.Windows.Forms.TextBox();
             this.birth = new System.Windows.Forms.TextBox();
@@ -44,17 +43,16 @@
             this.gmailtextBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.uTnumber2 = new System.Windows.Forms.TextBox();
             this.NICno = new System.Windows.Forms.TextBox();
             this.viewstudent = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.updatestu_button = new System.Windows.Forms.Button();
             this.removestu_button = new System.Windows.Forms.Button();
-            this.searchStuButton = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.Usernametext = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.courseIDtext = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.userNameText = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewstudent)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +65,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1048, 69);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -118,16 +117,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Gmail";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 338);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 16);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "UT Number ";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -144,6 +133,7 @@
             this.name_textBox3.Name = "name_textBox3";
             this.name_textBox3.Size = new System.Drawing.Size(196, 20);
             this.name_textBox3.TabIndex = 8;
+            this.name_textBox3.TextChanged += new System.EventHandler(this.name_textBox3_TextChanged);
             // 
             // birth
             // 
@@ -200,13 +190,6 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "Gender";
             // 
-            // uTnumber2
-            // 
-            this.uTnumber2.Location = new System.Drawing.Point(157, 338);
-            this.uTnumber2.Name = "uTnumber2";
-            this.uTnumber2.Size = new System.Drawing.Size(196, 20);
-            this.uTnumber2.TabIndex = 17;
-            // 
             // NICno
             // 
             this.NICno.Location = new System.Drawing.Point(157, 304);
@@ -257,49 +240,49 @@
             this.removestu_button.UseVisualStyleBackColor = true;
             this.removestu_button.Click += new System.EventHandler(this.removestu_button_Click);
             // 
-            // searchStuButton
+            // button2
             // 
-            this.searchStuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchStuButton.Location = new System.Drawing.Point(810, 557);
-            this.searchStuButton.Name = "searchStuButton";
-            this.searchStuButton.Size = new System.Drawing.Size(132, 33);
-            this.searchStuButton.TabIndex = 23;
-            this.searchStuButton.Text = "Search";
-            this.searchStuButton.UseVisualStyleBackColor = true;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(789, 557);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 33);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // courseIDtext
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 381);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 16);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "UserName";
+            this.courseIDtext.Location = new System.Drawing.Point(157, 378);
+            this.courseIDtext.Name = "courseIDtext";
+            this.courseIDtext.Size = new System.Drawing.Size(196, 20);
+            this.courseIDtext.TabIndex = 27;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 415);
+            this.label11.Location = new System.Drawing.Point(12, 379);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 16);
             this.label11.TabIndex = 25;
             this.label11.Text = "Course Id";
             // 
-            // Usernametext
+            // label6
             // 
-            this.Usernametext.Location = new System.Drawing.Point(157, 377);
-            this.Usernametext.Name = "Usernametext";
-            this.Usernametext.Size = new System.Drawing.Size(196, 20);
-            this.Usernametext.TabIndex = 26;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 346);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 16);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "UserName";
             // 
-            // courseIDtext
+            // userNameText
             // 
-            this.courseIDtext.Location = new System.Drawing.Point(157, 415);
-            this.courseIDtext.Name = "courseIDtext";
-            this.courseIDtext.Size = new System.Drawing.Size(196, 20);
-            this.courseIDtext.TabIndex = 27;
+            this.userNameText.Location = new System.Drawing.Point(157, 342);
+            this.userNameText.Name = "userNameText";
+            this.userNameText.Size = new System.Drawing.Size(196, 20);
+            this.userNameText.TabIndex = 30;
             // 
             // All_Student_List
             // 
@@ -307,17 +290,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1048, 658);
-            this.Controls.Add(this.courseIDtext);
-            this.Controls.Add(this.Usernametext);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.userNameText);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.searchStuButton);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.courseIDtext);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.removestu_button);
             this.Controls.Add(this.updatestu_button);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.viewstudent);
             this.Controls.Add(this.NICno);
-            this.Controls.Add(this.uTnumber2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gmailtextBox6);
@@ -327,7 +309,6 @@
             this.Controls.Add(this.birth);
             this.Controls.Add(this.name_textBox3);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -352,7 +333,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox name_textBox3;
         private System.Windows.Forms.TextBox birth;
@@ -362,16 +342,15 @@
         private System.Windows.Forms.TextBox gmailtextBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox uTnumber2;
         private System.Windows.Forms.TextBox NICno;
         private System.Windows.Forms.DataGridView viewstudent;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button updatestu_button;
         private System.Windows.Forms.Button removestu_button;
-        private System.Windows.Forms.Button searchStuButton;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox Usernametext;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox courseIDtext;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox userNameText;
     }
 }

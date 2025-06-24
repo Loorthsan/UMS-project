@@ -8,11 +8,7 @@ Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Properties.Re
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.AdminMainForm.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.CourseForm.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.MarkList.resources
-Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.Apply_Leave_Form.resources
-Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.Attendance.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.ExamForm.resources
-Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.Manage_Lecture.resources
-Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.Manage_Staff.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.All_Student_List.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.LectureMainForm.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.LoginForm.resources
@@ -20,7 +16,6 @@ Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.StaffMa
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.StudentMainForm.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.SubjectForm.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.TimeTableForm.resources
-Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.Views.View_Leave_Form.resources
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.csproj.GenerateResource.cache
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTicProject.csproj.CoreCompileInputs.cache
 Z:\C#\UnicomTicProject\UnicomTicProject\obj\Debug\UnicomTi.FFE72E14.Up2Date

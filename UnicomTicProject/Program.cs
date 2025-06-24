@@ -22,9 +22,11 @@ namespace UnicomTicProject
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
             //Application.Run(new CourseForm());
-            
+            //Application.Run(new StudentMainForm("student")); // or pass the logged-in user's username
+
             //Application.Run(new ExamForm());
             //Application.Run(new All_Student_List());
+            //Application.Run(new SubjectForm());
         }
     }
 }

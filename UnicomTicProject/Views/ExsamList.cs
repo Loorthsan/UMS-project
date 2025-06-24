@@ -36,7 +36,7 @@ namespace UnicomTicProject.Views
             Exsam exsam = new Exsam
             {
                 StudentName = studentnameTextBox1.Text.Trim(),
-                studentid = int.Parse(e_studentidTextbox.Text.Trim()),
+                ExamId = int.Parse(exsamidTextbox.Text.Trim()),
                 subjectname = subjectnametextbox.Text.Trim(),
                 couresename = coursenametextbox.Text.Trim(),
                 marks = markstextbox.Text.Trim(),
@@ -49,7 +49,7 @@ namespace UnicomTicProject.Views
 
 
             studentnameTextBox1.Text = "";
-            e_studentidTextbox.Text = "";
+            exsamidTextbox.Text = "";
             subjectnametextbox.Text = "";
             coursenametextbox.Text = "";
             markstextbox.Text = "";
@@ -80,11 +80,12 @@ namespace UnicomTicProject.Views
         {
             if (Examview.SelectedRows.Count > 0)
             {
-                int selectedStudentId = Convert.ToInt32(Examview.SelectedRows[0].Cells["ExamId"].Value);
+                int selectedStudentId = Convert.ToInt32(Examview.SelectedRows[0].Cells["studentid"].Value);
 
                 Exsam updatedExsam = new Exsam
                 {
-                    studentid = selectedStudentId,
+                    Studentid = selectedStudentId,
+                    ExamId = int.Parse(exsamidTextbox.Text.Trim()),
                     StudentName = studentnameTextBox1.Text,
                     subjectname = subjectnametextbox.Text,
                     couresename = coursenametextbox.Text,
@@ -104,20 +105,26 @@ namespace UnicomTicProject.Views
         {
             if (Examview.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = Examview.SelectedRows[0];
+                var row = Examview.SelectedRows[0];
 
-                studentnameTextBox1.Text = selectedRow.Cells["StudentName"].Value.ToString();
-                e_studentidTextbox.Text = selectedRow.Cells["studentid"].Value.ToString();
-                subjectnametextbox.Text = selectedRow.Cells["subjectname"].Value.ToString();
-                coursenametextbox.Text = selectedRow.Cells["couresename"].Value.ToString();
-                markstextbox.Text = selectedRow.Cells["marks"].Value.ToString();
-                exsamtextBox1.Text = selectedRow.Cells["exsamname"].Value.ToString();
+                studentnameTextBox1.Text = row.Cells["StudentName"].Value.ToString();
+                exsamidTextbox.Text = row.Cells["ExamId"].Value.ToString();
+                subjectnametextbox.Text = row.Cells["subjectname"].Value.ToString();
+                coursenametextbox.Text = row.Cells["couresename"].Value.ToString();
+                markstextbox.Text = row.Cells["marks"].Value.ToString();
+                exsamtextBox1.Text = row.Cells["examname"].Value.ToString();
             }
         }
 
         private void deletebuton_Click(object sender, EventArgs e)
         {
-
+            if (Examview.SelectedRows.Count > 0)
+            {
+                int studentid = Convert.ToInt32(Examview.SelectedRows[0].Cells["studentid"].Value);
+                _examController.DeleteExsam(studentid);
+                LoadExsamToGrid();
+                MessageBox.Show("Exam deleted successfully!");
+            }
         }
     }
 }

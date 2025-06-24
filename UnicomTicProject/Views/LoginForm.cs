@@ -55,7 +55,7 @@ namespace UnicomTicProject.Views
             else if (userRole == "Student")
             {
                 MessageBox.Show("Student Login Successful");
-                new StudentMainForm().Show();
+                new StudentMainForm(username).Show();
                 this.Hide();
             }
             else if (userRole == "Staff")

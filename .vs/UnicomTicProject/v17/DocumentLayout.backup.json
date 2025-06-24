@@ -31,22 +31,6 @@
       "RelativeMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|solutionrelative:unicomticproject\\views\\adminmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|Z:\\C#\\UnicomTicProject\\unicomticproject\\views\\markform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|solutionrelative:unicomticproject\\views\\markform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|Z:\\C#\\UnicomTicProject\\unicomticproject\\views\\markform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|solutionrelative:unicomticproject\\views\\markform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|Z:\\C#\\UnicomTicProject\\unicomticproject\\views\\timetableform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|solutionrelative:unicomticproject\\views\\timetableform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|Z:\\C#\\UnicomTicProject\\unicomticproject\\views\\view leave form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|solutionrelative:unicomticproject\\views\\view leave form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|Z:\\C#\\UnicomTicProject\\unicomticproject\\views\\exsamlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|solutionrelative:unicomticproject\\views\\exsamlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -85,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|Z:\\C#\\UnicomTicProject\\unicomticproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|solutionrelative:unicomticproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|Z:\\C#\\UnicomTicProject\\unicomticproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59937D16-065E-45F3-A9D8-A5A666AAAC51}|UnicomTicProject\\UnicomTicProject.csproj|solutionrelative:unicomticproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,69 +78,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "User.cs",
-              "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Models\\User.cs",
-              "RelativeDocumentMoniker": "UnicomTicProject\\Models\\User.cs",
-              "ToolTip": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Models\\User.cs",
-              "RelativeToolTip": "UnicomTicProject\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T07:31:42.112Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MarkForm.cs",
-              "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\MarkForm.cs",
-              "RelativeDocumentMoniker": "UnicomTicProject\\Views\\MarkForm.cs",
-              "ToolTip": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\MarkForm.cs",
-              "RelativeToolTip": "UnicomTicProject\\Views\\MarkForm.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAArwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T11:26:13.271Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MarkForm.cs [Design]",
-              "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\MarkForm.cs",
-              "RelativeDocumentMoniker": "UnicomTicProject\\Views\\MarkForm.cs",
-              "ToolTip": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\MarkForm.cs [Design]",
-              "RelativeToolTip": "UnicomTicProject\\Views\\MarkForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T11:26:11.599Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TimeTableForm.cs [Design]",
-              "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\TimeTableForm.cs",
-              "RelativeDocumentMoniker": "UnicomTicProject\\Views\\TimeTableForm.cs",
-              "ToolTip": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\TimeTableForm.cs [Design]",
-              "RelativeToolTip": "UnicomTicProject\\Views\\TimeTableForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T11:25:06.507Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "View Leave Form.cs [Design]",
-              "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\View Leave Form.cs",
-              "RelativeDocumentMoniker": "UnicomTicProject\\Views\\View Leave Form.cs",
-              "ToolTip": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\View Leave Form.cs [Design]",
-              "RelativeToolTip": "UnicomTicProject\\Views\\View Leave Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T11:24:17.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "ExsamList.cs [Design]",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\ExsamList.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Views\\ExsamList.cs",
@@ -171,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 10,
               "Title": "Manage Staff.cs [Design]",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\Manage Staff.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Views\\Manage Staff.cs",
@@ -182,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "SubjectForm.cs [Design]",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\SubjectForm.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Views\\SubjectForm.cs",
@@ -193,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 11,
               "Title": "Manage Lecture.cs [Design]",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\Manage Lecture.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Views\\Manage Lecture.cs",
@@ -215,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 13,
               "Title": "StaffMainForm.cs",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\StaffMainForm.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Views\\StaffMainForm.cs",
@@ -227,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 15,
               "Title": "Exsam.cs",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Models\\Exsam.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Models\\Exsam.cs",
@@ -239,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 14,
               "Title": "Mark.cs",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Models\\Mark.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Models\\Mark.cs",
@@ -285,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "StaffMainForm.cs [Design]",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\StaffMainForm.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Views\\StaffMainForm.cs",
@@ -296,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 12,
               "Title": "LectureMainForm.cs [Design]",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Views\\LectureMainForm.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Views\\LectureMainForm.cs",
@@ -320,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "Z:\\C#\\UnicomTicProject\\UnicomTicProject\\Program.cs",
               "RelativeDocumentMoniker": "UnicomTicProject\\Program.cs",

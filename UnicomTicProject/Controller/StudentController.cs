@@ -16,33 +16,31 @@ namespace UnicomTicProject.Controller
     {
         public void AddStudent(Student student)
         {
-            try
+            using (var conn = DBConfig.GetConnection())
             {
-                using (var conn = DBConfig.GetConnection())
+                using (var cmd = new SQLiteCommand(conn))
                 {
-                    conn.Open();
-                    var cmd = conn.CreateCommand();
-                    cmd.CommandText = @"INSERT INTO STUDENTS 
-                (Fullname, Birthofdate, Gender, Address, Phonenumber, Gmail, Nicno, UserName, courseid)
-                VALUES (@fullname, @birthdate, @gender, @address, @phone, @gmail, @nicno,@username, @courseid))";
+                    cmd.CommandText = @"
+                INSERT INTO STUDENTS 
+                        (Fullname, Birthofdate, Gender, Address, Phonenumber, Gmail, Nicno, UserName, courseid)
+                        VALUES 
+                        (@Fullname, @Birthofdate, @Gender, @Address, @Phonenumber, @Gmail, @Nicno, @UserName, @CourseId)";
 
-                    cmd.Parameters.AddWithValue("@fullname", student.Fullname);
-                    cmd.Parameters.AddWithValue("@birthdate", student.Birthofdate);
-                    cmd.Parameters.AddWithValue("@gender", student.Gender);
-                    cmd.Parameters.AddWithValue("@address", student.Address);
-                    cmd.Parameters.AddWithValue("@phone", student.Phonenumber);
-                    cmd.Parameters.AddWithValue("@gmail", student.Gmail);
-                    cmd.Parameters.AddWithValue("@nicno", student.Nicno);
-                    cmd.Parameters.AddWithValue("@username", student.UserName);
-                    cmd.Parameters.AddWithValue("@courseid", student.Courseid);
+                    cmd.Parameters.AddWithValue("@Fullname", student.Fullname);
+                    cmd.Parameters.AddWithValue("@Birthofdate", student.Birthofdate);
+                    cmd.Parameters.AddWithValue("@Gender", student.Gender);
+                    cmd.Parameters.AddWithValue("@Address", student.Address);
+                    cmd.Parameters.AddWithValue("@Phonenumber", student.Phonenumber);
+                    cmd.Parameters.AddWithValue("@Gmail", student.Gmail);
+                    cmd.Parameters.AddWithValue("@Nicno", student.Nicno);
+                    cmd.Parameters.AddWithValue("@UserName", student.UserName);
+                    cmd.Parameters.AddWithValue("@CourseId", student.CourseId);
+
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show("Error inserting student: " + ex.Message);
-            }
         }
+
 
 
         public void UpdateStudent(Student student)
@@ -51,36 +49,40 @@ namespace UnicomTicProject.Controller
             {
                 using (var conn = DBConfig.GetConnection())
                 {
-                    var cmd = conn.CreateCommand();
-                    cmd.CommandText = @"UPDATE STUDENTS 
-                                SET Fullname = @fullname,
-                                    Birthofdate = @birthdate,
-                                    Gender = @gender,
-                                    Address = @address,
-                                    Phonenumber = @phone,
-                                    Gmail = @gmail,
-                                    Nicno = @nicno,
-                                    UTnumber = @utnumber,
-                                    UserName = @username,
-                                    courseid = @courseid,
-                                WHERE UTnumber = @id";
+                    using (var cmd = new SQLiteCommand(conn))
+                    {
+                        cmd.CommandText = @"
+                    UPDATE STUDENTS 
+                    SET 
+                        Fullname = @fullname,
+                        Birthofdate = @birthdate,
+                        Gender = @gender,
+                        Address = @address,
+                        Phonenumber = @phone,
+                        Gmail = @gmail,
+                        Nicno = @nicno,
+                        UserName = @username,
+                        courseid = @courseid
+                    WHERE StudentId = @id";
 
-                    cmd.Parameters.AddWithValue("@fullname", student.Fullname);
-                    cmd.Parameters.AddWithValue("@birthdate", student.Birthofdate);
-                    cmd.Parameters.AddWithValue("@gender", student.Gender);
-                    cmd.Parameters.AddWithValue("@address", student.Address);
-                    cmd.Parameters.AddWithValue("@phone", student.Phonenumber);
-                    cmd.Parameters.AddWithValue("@gmail", student.Gmail);
-                    cmd.Parameters.AddWithValue("@nicno", student.Nicno);
-                    cmd.Parameters.AddWithValue("@utnumber", student.UTnumber);
-                    cmd.Parameters.AddWithValue("@username", student.UserName);
-                    cmd.Parameters.AddWithValue("@courseid", student.Courseid);
-                    cmd.ExecuteNonQuery();
-                }       
+                        cmd.Parameters.AddWithValue("@fullname", student.Fullname);
+                        cmd.Parameters.AddWithValue("@birthdate", student.Birthofdate);
+                        cmd.Parameters.AddWithValue("@gender", student.Gender);
+                        cmd.Parameters.AddWithValue("@address", student.Address);
+                        cmd.Parameters.AddWithValue("@phone", student.Phonenumber);
+                        cmd.Parameters.AddWithValue("@gmail", student.Gmail);
+                        cmd.Parameters.AddWithValue("@nicno", student.Nicno);
+                        cmd.Parameters.AddWithValue("@username", student.UserName);
+                        cmd.Parameters.AddWithValue("@courseid", student.CourseId);
+                        cmd.Parameters.AddWithValue("@id", student.StudentId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error updating student: " + ex.Message);
+                MessageBox.Show("Failed to update student. Please check the input and try again.");
             }
         }
 
@@ -94,44 +96,58 @@ namespace UnicomTicProject.Controller
             {
                 var cmd = new SQLiteCommand("SELECT * FROM STUDENTS", conn);
                 var reader = cmd.ExecuteReader();
+
                 while (reader.Read())
                 {
-                    Student student = new Student();
-                    student.UTnumber = reader.GetInt32(reader.GetOrdinal("UTnumber"));
-                    student.Fullname = reader.GetString(reader.GetOrdinal("Fullname"));
-                    student.Birthofdate = reader.GetString(reader.GetOrdinal("Birthofdate"));
-                    student.Gender = reader.GetString(reader.GetOrdinal("Gender"));
-                    student.Address = reader.GetString(reader.GetOrdinal("Address"));
-                    student.Phonenumber = reader.GetString(reader.GetOrdinal("Phonenumber"));
-                    student.Gmail = reader.GetString(reader.GetOrdinal("Gmail"));
-                    student.Nicno = reader.GetString(reader.GetOrdinal("Nicno"));
-                    //student.UserName = reader.GetString(reader.GetOrdinal("UserName"));
-                    student.CourseId = reader.GetInt32(reader.GetOrdinal("courseid"));
+                    Student student = new Student
+                    {
+                        StudentId = reader.GetInt32(reader.GetOrdinal("StudentId")),
+                        Fullname = reader.GetString(reader.GetOrdinal("Fullname")),
+                        Birthofdate = reader.GetString(reader.GetOrdinal("Birthofdate")),
+                        Gender = reader.GetString(reader.GetOrdinal("Gender")),
+                        Address = reader.GetString(reader.GetOrdinal("Address")),
+                        Phonenumber = reader.GetString(reader.GetOrdinal("Phonenumber")),
+                        Gmail = reader.GetString(reader.GetOrdinal("Gmail")),
+                        Nicno = reader.GetString(reader.GetOrdinal("Nicno")),
+                        UserName = reader.GetString(reader.GetOrdinal("UserName")),
+                        CourseId = reader.GetInt32(reader.GetOrdinal("courseid"))
+                    };
+
+                    students.Add(student);
                 }
             }
 
             return students;
         }
 
-        internal void DeleteStudent(int UTnumber)
+
+
+        public void DeleteStudent(int StudentId)
         {
             try
             {
                 using (var conn = DBConfig.GetConnection())
                 {
-                    var cmd = conn.CreateCommand();
-                    cmd.CommandText = "DELETE FROM STUDENTS WHERE UTnumber = @id";
-                    cmd.Parameters.AddWithValue("@id", UTnumber);
-                    cmd.ExecuteNonQuery();
+                    using (var cmd = new SQLiteCommand(conn))
+                    {
+                        cmd.CommandText = "DELETE FROM STUDENTS WHERE StudentId = @id";
+                        cmd.Parameters.AddWithValue("@id", StudentId);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error deleting selected: " + ex.Message);
+                Console.WriteLine("Error deleting student: " + ex.Message);
+                MessageBox.Show("Failed to delete student. Please try again.");
             }
         }
+
+       
     }
 
-}   
-    
+
+
+}
+
 

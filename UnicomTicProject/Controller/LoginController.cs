@@ -10,7 +10,10 @@ namespace UnicomTicProject.Controller
         private readonly Dictionary<string, (string username, string password)> users =
         new Dictionary<string, (string username, string password)>()
         {
-            { "Student", ("student", "stud123") },
+
+            { "Student", ("Student", "1234") },
+
+            
             { "Admin", ("admin", "admin123") },
             { "Staff", ("staff", "staff123") },
             { "Lecture",("lecture", "lect123") }

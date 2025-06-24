@@ -23,16 +23,15 @@ namespace UnicomTicProject.Repositeries
                 );
 
                 CREATE TABLE IF NOT EXISTS STUDENTS (
-                    UTnumber INTEGER PRIMARY KEY AUTOINCREMENT,
+                    StudentId INTEGER PRIMARY KEY AUTOINCREMENT,
                     Fullname TEXT NOT NULL,
                     Birthofdate TEXT NOT NULL,
                     Gender TEXT NOT NULL,
                     Address TEXT NOT NULL,
                     Phonenumber TEXT NOT NULL,
-                    Gmail TEXT NOT NULL, 
-                    Nicno TEXT NOT NULL,                  
-                    UserName TEXT NOT NULL,
-                   
+                    Gmail TEXT NOT NULL UNIQUE, 
+                    Nicno TEXT NOT NULL UNIQUE,                  
+                    UserName TEXT NOT NULL UNIQUE,
                     courseid INTEGER,
                     FOREIGN KEY (courseid) REFERENCES COURSE(courseid)
                 );
@@ -41,20 +40,21 @@ namespace UnicomTicProject.Repositeries
                     subjectid INTEGER PRIMARY KEY AUTOINCREMENT,
                     subjectname TEXT NOT NULL,
                     roomname TEXT NOT NULL,
-                    lecturename TEXT NOT NULL
+                    lecturename TEXT NOT NULL,
+                    coursid INTEGER NOT NULL,
+                    FOREIGN KEY (courseid) REFERENCES COURSE(courseid)
                 );
 
                 CREATE TABLE IF NOT EXISTS COURSE (
                     courseid INTEGER PRIMARY KEY AUTOINCREMENT,
                     coursename TEXT NOT NULL,
                     courseduration TEXT NOT NULL,
-                    coursedescription TEXT NOT NULL
-                    -- Removed FOREIGN KEY here, since subjectid does not exist in COURSE
+                    coursedescription TEXT NOT NULL  
                 );
 
                 CREATE TABLE IF NOT EXISTS EXAM (
-                    examid INTEGER PRIMARY KEY AUTOINCREMENT, 
-                    studentid INTEGER NOT NULL,
+                    StudentId INTEGER PRIMARY KEY AUTOINCREMENT, 
+                    ExamId INTEGER NOT NULL,
                     StudentName TEXT NOT NULL,
                     subjectname TEXT NOT NULL,
                     couresename TEXT NOT NULL,

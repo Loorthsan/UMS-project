@@ -82,35 +82,11 @@
     <Compile Include="Views\CourseForm.Designer.cs">
       <DependentUpon>CourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Student Apply Leave Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Student Apply Leave Form.Designer.cs">
-      <DependentUpon>Student Apply Leave Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Attendance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Attendance.Designer.cs">
-      <DependentUpon>Attendance.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\ExsamList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\ExsamList.Designer.cs">
       <DependentUpon>ExsamList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Manage Lecture.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Manage Lecture.Designer.cs">
-      <DependentUpon>Manage Lecture.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Manage Staff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Manage Staff.Designer.cs">
-      <DependentUpon>Manage Staff.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\managestudentForm.cs">
       <SubType>Form</SubType>
@@ -161,12 +137,6 @@
       <DependentUpon>TimeTableForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserModel.cs" />
-    <Compile Include="Views\View Leave Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\View Leave Form.Designer.cs">
-      <DependentUpon>View Leave Form.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -185,20 +155,8 @@
     <EmbeddedResource Include="Views\MarkForm.resx">
       <DependentUpon>MarkForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Student Apply Leave Form.resx">
-      <DependentUpon>Student Apply Leave Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Attendance.resx">
-      <DependentUpon>Attendance.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\ExsamList.resx">
       <DependentUpon>ExsamList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage Lecture.resx">
-      <DependentUpon>Manage Lecture.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Manage Staff.resx">
-      <DependentUpon>Manage Staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\managestudentForm.resx">
       <DependentUpon>managestudentForm.cs</DependentUpon>
@@ -221,9 +179,6 @@
     <EmbeddedResource Include="Views\TimeTableForm.resx">
       <DependentUpon>TimeTableForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\View Leave Form.resx">
-      <DependentUpon>View Leave Form.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -234,6 +189,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UMS.db" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
